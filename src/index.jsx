@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { render } from 'react-dom';
 import './style.css';
 import AnimalList from './components/AnimalList';
+import AnimalDetail from './components/AnimalDetail';
 
 const App = () => {
 
@@ -26,6 +27,9 @@ const App = () => {
 
       <div className="container">
         <AnimalList data={data} chooseAnimal={chooseAnimal} />
+        <AnimalDetail
+          selectedAnimal={selectedAnimal}
+          data={data} />
 
       </div>
 
